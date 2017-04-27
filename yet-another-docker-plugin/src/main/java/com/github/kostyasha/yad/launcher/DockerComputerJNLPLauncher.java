@@ -287,7 +287,9 @@ public class DockerComputerJNLPLauncher extends DockerComputerLauncher {
     }
 
     @Override
-    public void appendContainerConfig(DockerSlaveTemplate dockerSlaveTemplate, CreateContainerCmd createContainerCmd)
+    public void appendContainerConfig(DockerSlaveTemplate dockerSlaveTemplate,
+                                      CreateContainerCmd createContainerCmd,
+                                      DockerClient dockerClient)
             throws IOException {
         try (InputStream instream = DockerComputerJNLPLauncher.class.getResourceAsStream("DockerComputerJNLPLauncher/init.sh")) {
             final String initCmd = IOUtils.toString(instream, Charsets.UTF_8);
