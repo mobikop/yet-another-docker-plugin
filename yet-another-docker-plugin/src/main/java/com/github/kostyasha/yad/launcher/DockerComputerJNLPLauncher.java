@@ -56,7 +56,7 @@ public class DockerComputerJNLPLauncher extends DockerComputerLauncher {
 
     protected long launchTimeout = DEFAULT_TIMEOUT; //seconds
 
-    protected String user = "jenkins";
+    protected String user = DEFAULT_USER;
 
     protected String jvmOpts = "";
 
